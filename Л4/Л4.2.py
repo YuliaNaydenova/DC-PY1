@@ -12,6 +12,14 @@ def get_count_char(str_):
     return dict_
     # TODO посчитать количество каждой буквы в строке в аргументе str_
 
+def get_percent_char(dict_):
+    count_ = 0
+    dict_p = {}
+    for value in dict_.values():
+        count_ += value
+    for key in dict_.keys():
+        dict_p[key] = str(round((dict_[key]/count_) * 100, 2)) + '%'
+    return dict_p
 
 main_str = """
     Данное предложение будет разбиваться на отдельные слова. 
